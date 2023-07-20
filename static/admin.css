@@ -1,0 +1,102 @@
+body{
+    overflow: hidden;
+    
+}
+.admin{
+    margin-top: 10px;
+    background-color: rgb(34, 45, 50);
+    width: 20%;
+    height: 100vh;
+    padding: 10px;
+    /* display: flex;
+    float: left; */
+}
+
+#admin_img{
+    margin-top: 80px;
+    width: 100px;
+    height: 100px;
+    margin-left: 32%;
+}
+.admin h4{
+    margin-top: 10px;
+    text-align: center;
+    color: #dddddd;
+}
+.admin h2{
+    margin-top: 40px;
+    text-align: center;
+    color: #dddddd;
+}
+
+.admin h3{
+    margin-top: 10px;
+    text-align: center;
+    color: #dddddd;
+}
+
+
+.grid{
+    position: relative;
+    width: 100%;
+    display:flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px;
+    margin-top: -50%;
+    margin-left: 10%;
+    
+}
+
+.container {
+    overflow-y: auto;
+}
+
+.container .card{
+    width: 300px;
+    position: relative;
+    height: 350px;
+    background: white;
+    margin: 30px;
+    padding: 30px 10px;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0.5px 0.5px  10px black;
+    transition: 0.3s ease-in-out;
+    margin-top: 5%;
+    border-radius: 20px;
+}
+.container .card .imgbox{
+    position: relative;
+    width: 260px;
+    height: 260px;
+}
+
+.container .card .imgbox button{
+    max-width: 100%;
+    border: 10px;
+    width: 200px;
+    height: 200px;
+    margin-left: 40px;
+    cursor: pointer;
+}
+
+.container .card .imgbox img{
+    max-width: 100%;
+    border-radius: 10px;
+    width: 200px;
+    height: 200px;
+
+}
+.imgbox:hover img{
+    transform: scale(1.1);
+}
+
+.container .card .imgbox h2, p{
+    margin-top: 5px;
+    position: relative;
+    text-align: center;
+    margin-left: 10px;
+}

@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Moon+Dance&family=Rowdies&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=DM+Serif+Display:ital@1&family=Moon+Dance&display=swap');
+/* total body */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* navigation bar */
+.navigation{
+    padding: 0 40px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 6vh;
+    background-color: black;
+    
+}
+/* hostel management system anchor tag */
+.navigation a{
+    font-size: 23px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: aliceblue;
+    text-decoration: none;
+    float: left;
+    font-family: 'DM Serif Display', serif;
+
+}
+/* unorder list anchor tag */
+.navigation ul a{
+    float: right;
+    margin: 15px;
+    margin-top: 0;
+    font-family: 'Moon Dance', cursive;
+    
+}
+
+#button{
+    float: right;
+    font-size: 23px;
+    background-color: black;
+    color: aliceblue;
+    font-family: 'DM Serif Display', serif;
+    cursor: pointer;
+}

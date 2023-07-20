@@ -1,0 +1,41 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{%static 'home.css'%}">
+    <link rel="stylesheet" href="{%static 'nav.css'%}">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Moon+Dance&family=Rowdies&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=DM+Serif+Display:ital@1&family=Moon+Dance&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Navigation bar for front page -->
+    <nav>
+        <div class="navigation">
+            <a href="">hostel  management  system</a>
+            <ul>
+                <a href="{%url 'contact'%}">contact</a>
+                <a href="{%url 'about'%}">about</a>                
+            </ul>
+        </div>
+        
+    </nav>
+    <!-- Login -->
+    <div class="login">
+        <form action="{%url 'home'%}" method="post">          
+            {%csrf_token%}
+            <ul>
+                <li><h2>Login</h2></li>
+                <li> <input type="number" placeholder="Phone number" name="phone"></li>
+                <li> <input type="password" name="password" placeholder="Password"></li>
+                <li><input type="submit" value="Login"></li>
+                <li><p>Not an admin?<a href="{%url 'signup'%}"> Sign Up</a></p> </li>
+            </ul>
+       
+        </form>
+    </div>
+</body>
+</html>

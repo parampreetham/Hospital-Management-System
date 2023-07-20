@@ -1,0 +1,41 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign UP</title>
+    <link rel="stylesheet" href="{%static 'nav.css'%}">
+    <link rel="stylesheet" href="{%static 'signup.css'%}">
+</head>
+<body>
+    <nav>
+        <div class="navigation">
+            <a href="/">hostel  management  system</a>
+            <ul>
+                <a href="">contact</a>
+                <a href="">about</a>                
+            </ul>
+        </div>
+        
+    </nav>
+
+    <div class="signup">
+        <form action="" method="post">
+            {%csrf_token%}
+            <ul>
+                <li><h2>Sign Up</h2></li>
+                <li><input type="text" placeholder="First Name" name="fname"></li>
+                <li><input type="text" placeholder="Last Name" name="lname"></li>
+                <li><input type="number" placeholder="Phone Number" name="phone"></li>
+                <li><input type="password" placeholder="Password" name="password"></li>
+                <li><input type="password" placeholder="Confirm Password" name="conpassword" ></li>
+                
+                <li><input type="submit" value="SignUp"></li>
+                <li><p>Already an admin?<a href="{%url 'home'%}"> Login</a></p> </li>
+            </ul>
+        </form>
+    </div>
+</body>
+</html>

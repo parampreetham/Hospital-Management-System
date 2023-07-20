@@ -1,0 +1,62 @@
+body{
+    background: url(Images/home.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 300px;
+    background-repeat: no-repeat;
+}
+
+.signup form{
+    margin: auto    ;
+    margin-top: 100px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    width: 250px;
+    height: auto;
+    text-align: center;
+}
+
+.signup form ul{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 25px;
+    text-decoration: none;
+    display:inline;
+    list-style: none    ;
+}
+
+.signup  form li{
+    padding: 10px;
+    margin-top: 10px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.signup form li input{
+    border: 0;
+    border-radius: 20px;
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    padding: 10px;
+    margin-top: 0px;
+    /* margin-bottom: 10px; */
+}
+
+.signup form li input[type=submit]{
+    width: 100px;
+    height: 100%;
+    border: 0ch;
+    border-radius: 30px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.signup form li input[type=submit]:hover{
+    background-color: blue;
+}

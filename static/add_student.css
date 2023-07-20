@@ -1,0 +1,28 @@
+
+body h1{
+    margin-top: 80px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+h1{
+    text-align: center;
+}
+
+.addStudent form input{
+    width: 70%;
+    margin-left: 200px;
+}
+.addStudent form select{
+    width: 70%;
+    margin-left: 200px;
+}
+
+.addStudent form input[type=submit]{
+    margin-top: 30px;
+    width: 100px;
+    margin-left: 680px;
+}
+
+.addStudent form label{
+    margin-left: 200px;
+    margin-top: 5px;
+}

@@ -1,0 +1,97 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students</title>
+    <link rel="stylesheet" href="{%static 'students.css' %}">
+    <link rel="stylesheet" href="{%static 'nav.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="navigation">
+            <a href="">hostel  management  system</a>
+            <ul>
+                <!-- <a href="">Back</a> -->
+                <button onclick="history.back()" id="button">Back</button>
+            </ul>
+        </div>
+        
+    </nav>
+    <div class="total_students">
+        <p>Total Students : {{count}}</p> 
+    </div>
+    <div class="warden">
+        <h3>Warden Details:</h3>
+      Name: {{warden.name}} DOB: {{warden.dob}} Phone: {{warden.phone}} Email: {{warden.mail}}</p> 
+    </div>
+    <div class="search">
+        <form action="{%url 'search'%}">
+            <input type="text" placeholder="search" name="name">
+            <input type="hidden" name="host_id" value="{{host_id}}">
+            <input type="submit" value="search">
+        </form>
+    </div>
+    <div class="add_students">
+        <a href="{%url 'add_student' host_id %}">+ Add Student </a>
+    </div>
+    <div class="students_list">
+        <table border="1" >
+            <thead>
+                <tr>
+                    <th>Student Name</th>
+                    <th>Phone No.</th>
+                    <th>Department</th>
+                    <th>Joining year</th>
+                    <th>Room Number</th>
+                    <th>View/Edit</th>
+                    <th>Vistors</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                {%for student in student_list%}
+                <tr>
+                    <td>{{student.fname}} {{student.lname}}</td>
+                    <td>{{student.phone}}</td>
+                    <td>{{student.dept}}</td>
+                    <td>{{student.jyear}}</td>
+                    <td>{{student.room_no}}</td>
+                    <td><a href="{%url 'view_edit_student' student.id %}">View/Edit</a></td>
+                    <td><a href="{%url 'visitors_list' student.id %}">View</a></td>
+                    <td><a href="{%url 'student_delete' student.id %}">Delete</a></td>
+                </tr>
+                {%endfor%}
+                {%for stu in student%}
+                <tr>
+                    <td>{{stu.fname}} {{stu.lname}}</td>
+                    <td>{{stu.phone}}</td>
+                    <td>{{stu.dept}}</td>
+                    <td>{{stu.jyear}}</td>
+                    <td>{{stu.room_no}}</td>
+                    <td><a href="{%url 'view_edit_student' stu.id %}">View/Edit</a></td>
+                    <td><a href="{%url 'visitors_list' stu.id %}">View</a></td>
+                    <td><a href="{%url 'student_delete' stu.id %}">Delete</a></td>
+                </tr>
+                {%endfor%}
+                {%for stu in students%}
+                <tr>
+                    <td>{{stu.fname}} {{stu.lname}}</td>
+                    <td>{{stu.phone}}</td>
+                    <td>{{stu.dept}}</td>
+                    <td>{{stu.jyear}}</td>
+                    <td>{{stu.room_no}}</td>
+                    <td><a href="{%url 'view_edit_student' stu.id %}">View/Edit</a></td>
+                    <td><a href="{%url 'visitors_list' stu.id %}">View</a></td>
+                    <td><a href="{%url 'student_delete' stu.id %}">Delete</a></td>
+                </tr>
+                {%endfor%}
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,114 @@
+.total_students{
+    margin: auto;
+    margin-top: 60px;
+    padding: 10px;
+    width: 80%;
+    height: 50px;
+    background-color: antiquewhite;
+    color: #000;
+    border: 0ch;
+    border-radius: 30px;
+    font-size: 25px;
+    text-align: center;
+    font-weight: bold;
+}
+.add_students{
+    position: absolute;
+    right: 0;
+    margin-top: 30px;
+    margin-right: 60px;
+    width: 150px;
+    height: 40px;
+    background-color: aliceblue;
+    padding: 10px;
+    border: 0ch;
+    border-radius: 20px;
+    text-align: center;
+}
+.add_students a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+}
+
+.students_list{
+    margin-top: 100px;
+    overflow-y: scroll;
+
+}
+.students_list table{
+    border-collapse: collapse;
+    margin: auto;
+    width: 80%;
+    border: none;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    
+}
+
+.search{
+    margin-left: 550px;
+    margin-top: 20px;
+
+}
+
+.search input{
+    width: 300px;
+    height: 30px;
+    border: 0;
+    border-radius: 10px;
+    background-color: #dddddd;
+    text-align: center;
+}
+
+.search input[type=submit]{
+    width: 100px;
+    border-radius: 10px;
+}
+
+.students_list table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: center;
+    font-size: 20px;
+    /* height: 30px; */
+}
+
+.students_list table th,
+.students_list table td {
+    padding: 12px 15px;
+}
+
+.students_list table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.students_list table tbody tr td a{
+    text-align: center;
+    text-decoration: none;
+}
+
+.students_list table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.students_list table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+.warden{
+    margin: auto;
+    margin-top: 10px;
+    width: 90%;
+    height: auto;
+    padding: 10px;
+    background-color: #dddddd;
+    border: 0;
+    border-radius: 20px;
+    
+}
+.warden p{
+    font-weight: bold;
+}

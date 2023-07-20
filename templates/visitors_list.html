@@ -1,0 +1,59 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visitors</title>
+    <link rel="stylesheet" href="{%static 'visitors_list.css' %}">
+    <link rel="stylesheet" href="{%static 'nav.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="navigation">
+            <a href="">hostel  management  system</a>
+            <ul>
+                <a href="{%url 'students_list' host_id %}" >Back</a>
+            </ul>
+        </div>
+        
+    </nav>
+    <div class="total_visitors">
+        <p>Total Visitors : {{count}}</p> 
+    </div>
+    <div class="add_visitor">
+        <a href="{%url 'add_visitors' student_id %}">+ Add Visitor </a>
+    </div>
+    <div class="visitors_list">
+        <table border="1" >
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Relation</th>
+                    <th>Date</th>
+                    <th>In time</th>
+                    <th>Out Time</th>
+                    <th>View/Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                {%for visitor in visitors_list%}
+                <tr>
+                    <td>{{visitor.name}}</td>
+                    <td>{{visitor.relationship}}</td>
+                    <td>{{visitor.date}}</td>
+                    <td>{{visitor.in_time}}</td>
+                    <td>{{visitor.out_time}}</td>
+                    <td><a href="{%url 'view_edit_visitor' visitor.id %}">View/Edit</a></td>
+                    <td><a href="{%url 'visitor_delete' visitor.id %}">Delete</a></td>
+                </tr>
+                {%endfor%}
+               
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

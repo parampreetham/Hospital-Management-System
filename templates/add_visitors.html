@@ -1,0 +1,51 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visitors</title>
+    <link rel="stylesheet" href="{%static 'nav.css' %}">
+    <link rel="stylesheet" href="{%static 'add_visitors.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<body>
+    <nav>
+        <div class="navigation">
+            <a href="">hostel  management  system</a>
+            <ul>
+                <a href="{%url 'visitors_list' student_id %}">Back</a>
+            </ul>
+        </div>
+        
+    </nav>
+
+    <h1>Visitor Details</h1>
+    <div class="addVisitor">
+        <form action="" method="post">
+            {% csrf_token %}
+            <label for="name">Name:</label>
+            <input type="text" name="name" placeholder="Name" class="form-control">
+            <label for="relationship">Relationship:</label>
+            <select id="dept" name="relationship" class="form-select">
+                <option value="Father">Father</option>
+                <option value="Mother">Mother</option>
+                <option value="Brother/Sister">Brother/Sister</option>
+                <option value="Gaurdian">Gaurdian</option>
+              </select>
+              <label for="date">Date:</label>
+              <input type="date" name="date" class="form-control">
+              <label for="in_time">In Time:</label>
+              <input type="time" name="in_time" class="form-control">
+              <label for="out_time">Out Time:</label>
+              <input type="time" name="out_time" class="form-control">
+              <input type="hidden" name="student_id" value="{{student_id}}">
+            <input type="submit" value="Update" class="btn btn-secondary">
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>
